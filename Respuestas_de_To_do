@@ -1,0 +1,8 @@
+respuesta:
+1-es una forma para repartir recursos de varias tareas para que la aplicacion tenga se optimise mejor y que la aplicacion no se bloquee o se bugea, la diferencia con el hilo principal es que coroutine reparte las tareas enc varios recursos.
+
+2-para liberar recursos en el sistema y que no consuma mucho recurso la aplicacion siempre que la ocupes y solo cuando sea necesarios, y se implementa normalmente un suspense cuando la tarea no es necesaria desde el principio.
+
+3-es para especificar en que hilo(lugar) podes mandar una tarea, Dispatchers.Main es para mandarlo a la rama principal: eso se ocupa cuando la tarea es primordial para la aplicacion, Dispatchers.OI es para cuando necesitas que datos entren o salgan y la Dispatchers.Default: normalmente es raro de ocupar pero funciona para tareas que requieren un requerimiento intensivo.
+
+4-Async es buena cuando se debe ejecutar en la aplicacion tareas que estan activa al mismo tiempo y que la aplicacion no sobrecargue los recursos, y principalmente es considerado un costructor.
